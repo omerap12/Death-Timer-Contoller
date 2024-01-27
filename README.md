@@ -8,6 +8,13 @@ Death Timer Controller is an operator created using Operator SDK with Golang to 
 2. Deployments
 3. Pods
 
+## Controller Code:
+
+The controller code can be found under 
+```bash
+./controllers/deathtimer_controller.go
+```
+You can view it directly here: [deathtimer_controller.go](https://github.com/omerap12/Death-Timer-Contoller/blob/main/controllers/deathtimer_controller.go)
 ## How to Deploy:
 
 ### Step 1: Create a Cluster
