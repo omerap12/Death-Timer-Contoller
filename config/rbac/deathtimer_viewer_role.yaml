@@ -1,0 +1,27 @@
+# permissions for end users to view deathtimers.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: clusterrole
+    app.kubernetes.io/instance: deathtimer-viewer-role
+    app.kubernetes.io/component: rbac
+    app.kubernetes.io/created-by: death-timer-contoller
+    app.kubernetes.io/part-of: death-timer-contoller
+    app.kubernetes.io/managed-by: kustomize
+  name: deathtimer-viewer-role
+rules:
+- apiGroups:
+  - api.omer.aplatony
+  resources:
+  - deathtimers
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - api.omer.aplatony
+  resources:
+  - deathtimers/status
+  verbs:
+  - get
